@@ -1,0 +1,15 @@
+Tesla T4,cublas_fp16,1024,0.067,32.23,100.0,0
+Tesla T4,tc0_wmma_naive,1024,0.586,3.67,11.4,0.00e+00
+Tesla T4,tc1_wmma_smem,1024,0.090,23.89,74.1,0.00e+00
+Tesla T4,tc2_wmma_dbuf,1024,0.092,23.30,72.3,0.00e+00
+Tesla T4,tc3_wmma_swizzle,1024,0.088,24.31,75.4,0.00e+00
+Tesla T4,cublas_fp16,2048,0.430,39.98,100.0,0
+Tesla T4,tc0_wmma_naive,2048,6.988,2.46,6.1,0.00e+00
+Tesla T4,tc1_wmma_smem,2048,0.780,22.02,55.1,0.00e+00
+Tesla T4,tc2_wmma_dbuf,2048,0.752,22.86,57.2,0.00e+00
+Tesla T4,tc3_wmma_swizzle,2048,0.607,28.31,70.8,0.00e+00
+Tesla T4,cublas_fp16,4096,4.162,33.03,100.0,0
+Tesla T4,tc0_wmma_naive,4096,83.638,1.64,5.0,0.00e+00
+Tesla T4,tc1_wmma_smem,4096,10.123,13.58,41.1,0.00e+00
+Tesla T4,tc2_wmma_dbuf,4096,8.559,16.06,48.6,0.00e+00
+Tesla T4,tc3_wmma_swizzle,4096,8.616,15.95,48.3,0.00e+00

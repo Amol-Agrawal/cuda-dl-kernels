@@ -1,0 +1,9 @@
+sgemm
+hgemm
+softmax
+occupancy
+__pycache__/
+*.pyc
+results.zip
+*.nsys-rep
+*.ncu-rep

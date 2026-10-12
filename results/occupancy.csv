@@ -1,0 +1,13 @@
+kernel,threads,regs,smem_bytes,spill_bytes,blocks_per_sm,occupancy_pct,limiter
+0_naive,1024,52,0,0,1,100,threads
+1_coalesced,1024,52,0,0,1,100,threads
+2_smem_tiling,1024,42,8192,0,1,100,threads
+3_reg_blocking,256,127,8192,0,2,50,registers
+4_vec4,256,101,8192,0,2,50,registers
+tc0_wmma_naive,128,64,0,0,8,100,threads
+tc1_wmma_smem,256,122,18944,0,2,50,registers
+tc2_wmma_dbuf,256,150,37888,0,1,25,registers
+tc3_wmma_swizzle,256,122,18944,0,2,50,registers
+softmax_rowmax,256,39,1024,0,4,100,threads
+softmax_fused<4>,256,23,32,0,4,100,threads
+softmax_fused<16>,256,37,32,0,4,100,threads

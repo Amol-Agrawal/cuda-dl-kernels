@@ -1,0 +1,10 @@
+kernel,track,AI,bound,predicted_gflops,measured_gflops,pct_of_model
+0_naive,FP32,0.25,memory,80,62,77.6
+1_coalesced,FP32,0.25,memory,80,564,705.6
+2_smem_tiling,FP32,8.00,memory,2560,870,34.0
+3_reg_blocking,FP32,32.00,compute,8100,3294,40.7
+4_vec4,FP32,32.00,compute,8100,3510,43.3
+tc0_wmma_naive,FP16,8.00,memory,2560,1643,64.2
+tc1_wmma_smem,FP16,64.00,memory,20480,13577,66.3
+tc2_wmma_dbuf,FP16,64.00,memory,20480,16057,78.4
+tc3_wmma_swizzle,FP16,64.00,memory,20480,15951,77.9

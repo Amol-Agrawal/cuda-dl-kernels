@@ -1,0 +1,12 @@
+attention_mode,category,ms_per_forward,pct
+eager,GEMM,134.51,49.6
+eager,"other (elementwise, GELU, masks, ...)",110.56,40.8
+eager,softmax,22.19,8.2
+eager,layernorm,3.93,1.4
+eager,memcpy/memset,0.00,0.0
+sdpa,GEMM,106.67,59.9
+sdpa,"other (elementwise, GELU, masks, ...)",53.09,29.8
+sdpa,attention (fused),14.37,8.1
+sdpa,layernorm,3.97,2.2
+softmax_bench,torch.softmax 24576x1024,0.974,
+softmax_bench,ours (fused) 24576x1024,0.879,

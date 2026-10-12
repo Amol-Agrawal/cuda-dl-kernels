@@ -1,0 +1,19 @@
+op,impl,ms,perf,unit
+sgemm fp32 4096,torch.matmul,35.081,3.92,TFLOPS
+sgemm fp32 4096,ours (vec4),39.265,3.50,TFLOPS
+hgemm fp16 4096,ours (wmma_smem),8.903,15.44,TFLOPS
+hgemm fp16 4096,ours (wmma_dbuf),8.688,15.82,TFLOPS
+hgemm fp16 4096,ours (wmma_swizzle),8.617,15.95,TFLOPS
+hgemm fp16 4096,torch.matmul (fp16 out),6.586,20.87,TFLOPS
+softmax 16384x512,torch.softmax,0.315,213.02,GB/s
+softmax 16384x512,ours (naive 3-kernel),0.758,88.49,GB/s
+softmax 16384x512,ours (fused),0.283,237.48,GB/s
+softmax 8192x1024,torch.softmax,0.322,208.71,GB/s
+softmax 8192x1024,ours (naive 3-kernel),0.533,125.94,GB/s
+softmax 8192x1024,ours (fused),0.289,232.47,GB/s
+softmax 4096x2048,torch.softmax,0.324,207.09,GB/s
+softmax 4096x2048,ours (naive 3-kernel),0.541,123.95,GB/s
+softmax 4096x2048,ours (fused),0.305,219.97,GB/s
+softmax 2048x4096,torch.softmax,0.295,227.83,GB/s
+softmax 2048x4096,ours (naive 3-kernel),0.556,120.66,GB/s
+softmax 2048x4096,ours (fused),0.311,215.82,GB/s
